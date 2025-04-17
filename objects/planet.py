@@ -7,7 +7,6 @@ class Planet(CosmicEntity):
     def __init__(self, name: str):
         super().__init__(name)
 
-        # TODO: Make the day system more complex
         self.world_time = 0
         self.is_day_time = True
         self.day_count = 0

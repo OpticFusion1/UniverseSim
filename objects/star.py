@@ -7,5 +7,5 @@ class Star(CosmicEntity):
         self.generate_children()
 
     def generate_children(self):
-        for i in range(3):  # Add a few planets
+        for i in range(3):
             self.children.append(Planet(f"Planet-{i + 1}"))

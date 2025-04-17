@@ -8,10 +8,9 @@ class ObservableUniverse(CosmicEntity):
         self.generate_children()
 
     def generate_children(self):
-    	# TODO: Implement the ability to randomly generate a name
         self.children.append(Supercluster("Supercluster-1"))
 
     def render(self, indent=0):
         if not self.should_render:
-            return  # Skip rendering this observable universe
+            return
         super().render(indent)
