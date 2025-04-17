@@ -4,7 +4,7 @@ from .supercluster import Supercluster
 class ObservableUniverse(CosmicEntity):
     def __init__(self):
         super().__init__("Observable Universe")
-        self.should_render = False
+        self.should_render = True
         self.generate_children()
 
     def generate_children(self):
