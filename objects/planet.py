@@ -1,5 +1,7 @@
 import random
 from .cosmic_entity import CosmicEntity
+from .entity.entity import Entity
+from .entity.humanentity import HumanEntity
 
 class Planet(CosmicEntity):
     def __init__(self, name: str):
@@ -15,7 +17,7 @@ class Planet(CosmicEntity):
         self.generate_children()
 
     def generate_children(self):
-        print("No children to generate")
+        self.entities.append(HumanEntity("Human"))
 
     def update(self):
         super().update()
@@ -28,7 +30,7 @@ class Planet(CosmicEntity):
         self.render_day(indent)
         print(" " * (indent + 2) + "Entities on planet:")
         for entity in self.entities:
-            print(" " * (indent + 4) + str(entity))
+            entity.render(indent)
 
     def update_day(self):
         self.world_time += 1
